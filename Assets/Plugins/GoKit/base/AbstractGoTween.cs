@@ -328,6 +328,16 @@ public abstract class AbstractGoTween
 
         yield break;
     }
+
+	/// <summary>
+	/// resets the completion handler flag to false. 
+	/// useful in cases of tween recycling.
+	/// must be called for each reuse
+	/// </summary>
+    public void ResetCompletionFlag()
+    {
+    	_didComplete = false;
+    }
 	
 
 }
